@@ -56,7 +56,7 @@
                     "Exposure": "public"
                 },
                 {
-                    "Name": "bumpLinkCreate",
+                    "Name": "bumpCreate",
                     "CallingType": "json",
                     "Exposure": "public"
                 },
