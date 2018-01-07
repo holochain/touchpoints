@@ -16,15 +16,14 @@ function nfcTagDelete(hash){
     return true;
 }
 
-function bumpCreate(bump) {
+function touchCreate(touch) {
     var me = getMe();
-    // what if two people bump a tag during the same second?
-    var bumpHash = commit("bump", bump);
-    var tagHash = makeHash("nfcTag", { id: bump.nfcTag });
-    var linkHash = commit("bumpLink",
+    var touchHash = commit("touch", touch);
+    var tagHash = makeHash("nfcTag", { id: touch.nfcTag });
+    var linkHash = commit("touchLink",
                   {Links:[
-                      {Base:tagHash,Tag:"bump",Link:bumpHash},
-                      {Base:me,Tag:"bump",Link:bumpHash}
+                      {Base:tagHash,Tag:"touch",Link:touchHash},
+                      {Base:me,Tag:"touch",Link:touchHash}
                   ]});
     return linkHash;
 }
@@ -32,20 +31,20 @@ function bumpCreate(bump) {
 function getMe() {return App.Key.Hash;}
 
 function showAgentHistory(params) {
-  var links = getLinks(params.agentId, "bump", {Load:true})
-  links.sort(bumpCmp);
+  var links = getLinks(params.agentId, "touch", {Load:true})
+  links.sort(touchCmp);
   return links;
 }
 
 function showTagHistory(params) {
   var tagHash = makeHash("nfcTag", { id: params.tagId });
-  var links = getLinks(tagHash, "bump", {Load:true});
-  links.sort(bumpCmp);
+  var links = getLinks(tagHash, "touch", {Load:true});
+  links.sort(touchCmp);
   return links;
 }
 
 
-function bumpCmp(a,b) {
+function touchCmp(a,b) {
     return a.Entry.stamp < b.Entry.stamp;
 }
 
@@ -80,10 +79,10 @@ function validateCommit (entryName, entry, header, pkg, sources) {
     case "nfcTag":
       // validation code here
       return true;
-    case "bump":
+    case "touch":
       // validation code here
       return true;
-    case "bumpLink":
+    case "touchLink":
       // validation code here
       return true;
     default:
@@ -106,7 +105,7 @@ function validatePut (entryName, entry, header, pkg, sources) {
     case "nfcTag":
       // validation code here
       return true;
-    case "bump":
+    case "touch":
       // validation code here
       return true;
     default:
@@ -130,7 +129,7 @@ function validateMod (entryName, entry, header, replaces, pkg, sources) {
     case "nfcTag":
       // validation code here
       return false;
-    case "bump":
+    case "touch":
       // validation code here
       return false;
     case "typeLink":
@@ -178,7 +177,7 @@ function validateLink (linkEntryType, baseHash, links, pkg, sources) {
     case "nfcTag":
       // validation code here
       return false;
-    case "bumpLink":
+    case "touchLink":
       // validation code here
       return true;
     default:

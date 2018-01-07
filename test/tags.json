@@ -17,9 +17,9 @@
             "Repeat": 0
         },
         {
-            "Convey": "Create bump",
+            "Convey": "Create touch",
             "Zome": "nfcTag",
-            "FnName": "bumpCreate",
+            "FnName": "touchCreate",
             "Input": {
                 "nfcTag": "12345",
                 "stamp": "%reps%"
@@ -34,15 +34,15 @@
             "Repeat": 2
         },
         {
-            "Convey": "Return a list of bumps for an agent",
+            "Convey": "Return a list of touchs for an agent",
             "Zome": "nfcTag",
             "FnName": "showAgentHistory",
             "Input": {
                 "agentId": "%key%"
               },
             "Output": [
-              {"Entry":{"nfcTag":"12345","stamp":"1"},"EntryType":"bump","Hash":"QmNxD9pTeN5ZsPUtuvCkgm1iwJhWgp3JW5ayCggv2rtreR","Source":"%key%"},
-              {"Entry":{"nfcTag":"12345","stamp":"0"},"EntryType":"bump","Hash":"QmcgwnzVsWV2bbTiYNAJjUkFkmTzksrgbN7PwnqjkMuA7p","Source":"%key%"}
+              {"Entry":{"nfcTag":"12345","stamp":"1"},"EntryType":"touch","Hash":"QmNxD9pTeN5ZsPUtuvCkgm1iwJhWgp3JW5ayCggv2rtreR","Source":"%key%"},
+              {"Entry":{"nfcTag":"12345","stamp":"0"},"EntryType":"touch","Hash":"QmcgwnzVsWV2bbTiYNAJjUkFkmTzksrgbN7PwnqjkMuA7p","Source":"%key%"}
             ],
             "Err": "",
             "Regexp": "",
@@ -53,15 +53,15 @@
             "Repeat": 0
         },
         {
-            "Convey": "Return a list of bumps for an nfc tag",
+            "Convey": "Return a list of touchs for an nfc tag",
             "Zome": "nfcTag",
             "FnName": "showTagHistory",
             "Input": {
                 "tagId": "12345"
               },
             "Output": [
-              {"Entry":{"nfcTag":"12345","stamp":"1"},"EntryType":"bump","Hash":"QmNxD9pTeN5ZsPUtuvCkgm1iwJhWgp3JW5ayCggv2rtreR","Source":"%key%"},
-              {"Entry":{"nfcTag":"12345","stamp":"0"},"EntryType":"bump","Hash":"QmcgwnzVsWV2bbTiYNAJjUkFkmTzksrgbN7PwnqjkMuA7p","Source":"%key%"}
+              {"Entry":{"nfcTag":"12345","stamp":"1"},"EntryType":"touch","Hash":"QmNxD9pTeN5ZsPUtuvCkgm1iwJhWgp3JW5ayCggv2rtreR","Source":"%key%"},
+              {"Entry":{"nfcTag":"12345","stamp":"0"},"EntryType":"touch","Hash":"QmcgwnzVsWV2bbTiYNAJjUkFkmTzksrgbN7PwnqjkMuA7p","Source":"%key%"}
             ],
             "Err": "",
             "Regexp": "",
