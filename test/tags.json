@@ -17,9 +17,9 @@
             "Repeat": 0
         },
         {
-            "Convey": "Create bumpLink",
+            "Convey": "Create bump",
             "Zome": "nfcTag",
-            "FnName": "bumpLinkCreate",
+            "FnName": "bumpCreate",
             "Input": {
                 "nfcTag": "12345",
                 "stamp": "%reps%"

@@ -1,7 +1,8 @@
 'use strict';
 
 function nfcTagCreate(tagId){
-    var key = commit("nfcTag",tagId);         // Commits a new nfcTag to my source chain
+    // Commits a new nfcTag to my source chain
+    var key = commit("nfcTag",tagId);
     return key;
 }
 
@@ -15,7 +16,7 @@ function nfcTagDelete(hash){
     return true;
 }
 
-function bumpLinkCreate(bump) {
+function bumpCreate(bump) {
     var me = getMe();
     // what if two people bump a tag during the same second?
     var bumpHash = commit("bump", bump);
