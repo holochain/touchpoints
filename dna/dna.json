@@ -61,17 +61,7 @@
                     "Exposure": "public"
                 },
                 {
-                    "Name": "bumpLinkRead",
-                    "CallingType": "links",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "bumpLinkUpdate",
-                    "CallingType": "links",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "bumpLinkDelete",
+                    "Name": "bumpRead",
                     "CallingType": "links",
                     "Exposure": "public"
                 },
