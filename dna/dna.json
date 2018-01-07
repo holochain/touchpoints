@@ -23,9 +23,9 @@
                     "Sharing": "public"
                 },
                 {
-                    "Name": "bump",
+                    "Name": "touch",
                     "DataFormat": "json",
-                    "SchemaFile": "bump.json",
+                    "SchemaFile": "touch.json",
                     "Sharing": "public"
                 },
                 {
