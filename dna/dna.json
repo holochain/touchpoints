@@ -1,0 +1,106 @@
+{
+    "Version": 1,
+    "UUID": "16b6e954-f6dc-4fcd-964c-46b7fa3f1cdf",
+    "Name": "touchpoints",
+    "Properties": {
+        "description": "Logging system for interactions of various types: human-to-human, human-to-machine, human-to-object, machine-to-object etc",
+        "language": "en"
+    },
+    "PropertiesSchemaFile": "properties_schema.json",
+    "BasedOn": {
+        "H": null
+    },
+    "Zomes": [
+        {
+            "Name": "nfcTag",
+            "Description": "Create, register, and link NFC tags to data types, interfaces and people.",
+            "CodeFile": "nfcTag.js",
+            "Entries": [
+                {
+                    "Name": "nfcTag",
+                    "DataFormat": "json",
+                    "SchemaFile": "nfcTag.json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "bump",
+                    "DataFormat": "json",
+                    "SchemaFile": "bump.json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "bumpLink",
+                    "DataFormat": "links"
+                }
+            ],
+            "RibosomeType": "js",
+            "Functions": [
+                {
+                    "Name": "nfcTagCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "nfcTagRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "nfcTagUpdate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "nfcTagDelete",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "bumpLinkCreate",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "bumpLinkRead",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "bumpLinkUpdate",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "bumpLinkDelete",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "showAgentHistory",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "showTagHistory",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "getMe",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                }
+            ],
+            "BridgeFuncs": null,
+            "BridgeTo": ""
+        }
+    ],
+    "RequiresVersion": 18,
+    "DHTConfig": {
+        "HashType": "sha2-256"
+    },
+    "Progenitor": {
+        "Identity": "",
+        "PubKey": null
+    }
+}

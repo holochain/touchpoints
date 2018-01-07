@@ -1,0 +1,15 @@
+{
+  "title": "bump",
+  "type": "object",
+  "properties": {
+    "nfcTag": {
+      "type": "string"
+    },
+    "stamp": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "nfcTag", "stamp"
+  ]
+}
