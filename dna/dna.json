@@ -29,7 +29,7 @@
                     "Sharing": "public"
                 },
                 {
-                    "Name": "bumpLink",
+                    "Name": "touchLink",
                     "DataFormat": "links"
                 }
             ],
@@ -56,22 +56,22 @@
                     "Exposure": "public"
                 },
                 {
-                    "Name": "bumpLinkCreate",
+                    "Name": "touchCreate",
                     "CallingType": "json",
                     "Exposure": "public"
                 },
                 {
-                    "Name": "bumpLinkRead",
+                    "Name": "touchLinkRead",
                     "CallingType": "links",
                     "Exposure": "public"
                 },
                 {
-                    "Name": "bumpLinkUpdate",
+                    "Name": "touchLinkUpdate",
                     "CallingType": "links",
                     "Exposure": "public"
                 },
                 {
-                    "Name": "bumpLinkDelete",
+                    "Name": "touchLinkDelete",
                     "CallingType": "links",
                     "Exposure": "public"
                 },
