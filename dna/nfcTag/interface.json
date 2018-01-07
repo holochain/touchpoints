@@ -1,0 +1,20 @@
+{
+  "title": "interface",
+  "type": "object",
+  "properties": {
+    "appDNAHash": {
+      "type": "string"
+    },
+    "zomeName": {
+      "type": "string"
+    },
+    "interfaceName": {
+      "type": "string"
+    },
+  },
+  "required": [
+    "appDNAHash",
+    "zomeName",
+    "interfaceName",
+  ]
+}
