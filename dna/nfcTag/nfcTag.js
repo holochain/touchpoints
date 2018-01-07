@@ -95,6 +95,9 @@ function validateCommit (entryName, entry, header, pkg, sources) {
     case "bumpLink":
       // validation code here
       return true;
+    case "interface":
+      // validation code here
+      return true;
     default:
       // invalid entry name!!
       return false;
@@ -116,6 +119,9 @@ function validatePut (entryName, entry, header, pkg, sources) {
       // validation code here
       return true;
     case "bump":
+      // validation code here
+      return true;
+    case "interface":
       // validation code here
       return true;
     default:
@@ -145,6 +151,9 @@ function validateMod (entryName, entry, header, replaces, pkg, sources) {
     case "typeLink":
       // validation code here
       return false;
+    case "interface":
+      // validation code here
+      return true;
     default:
       // invalid entry name!!
       return false;
@@ -170,6 +179,9 @@ function validateDel (entryName, hash, pkg, sources) {
     case "typeLink":
       // validation code here
       return false;
+    case "interface":
+      // validation code here
+      return true;
     default:
       // invalid entry name!!
       return false;
