@@ -1,0 +1,102 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 20px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+* {
+  font-family: Avenir;
+  color: #696565;
+  font-weight: 300;
+}
+
+.overview_message {
+  font-size: 20px;
+  padding: 20px;
+}
+
+.title {
+  /* YOU WERE WITH: */
+  font-size: 14px;
+}
+
+/* user name */
+.name {
+  font-size: 26px;
+}
+
+.user_image {
+  /* Rectangle Copy 4: */
+  height: 172px;
+  width: 172px;
+  /* display: flex; */
+  justify-content: center;
+  display: block;
+  margin: auto;
+  background-position: top 140px;
+
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.34);
+  border: 1px solid #ffffff;
+  border-radius: 172px;
+}
+
+/* time of day prompt */
+
+.time {
+  font-size: 10px;
+}
+
+/* develompmental edge message */
+
+.dev_message {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+/* questions you will ask them */
+.prompt_message {
+  padding: 20px;
+  font-size: 18px;
+}
+
+button.icon {
+  /* Rectangle Copy 4: */
+  background: rgba(255, 255, 255, 0.51);
+  border: 1px solid #ffffff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.34);
+  border-radius: 72px;
+  height: 72px;
+  width: 72px;
+}
+
+button.continue {
+  margin: 20px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
