@@ -32,13 +32,20 @@ function getMe() {return App.Key.Hash;}
 
 function showAgentHistory(params) {
   var links = getLinks(params.agentId, "bump", {Load:true})
+  links.sort(bumpCmp);
   return links;
 }
 
 function showTagHistory(params) {
   var tagHash = makeHash("nfcTag", { id: params.tagId });
   var links = getLinks(tagHash, "bump", {Load:true});
+  links.sort(bumpCmp);
   return links;
+}
+
+
+function bumpCmp(a,b) {
+    return a.Entry.stamp < b.Entry.stamp;
 }
 
 // -----------------------------------------------------------------
