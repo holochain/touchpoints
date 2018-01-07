@@ -15,14 +15,11 @@ function nfcTagDelete(hash){
     return true;
 }
 
-function bumpLinkCreate(nfcTag) {
+function bumpLinkCreate(bump) {
     var me = getMe();
     // what if two people bump a tag during the same second?
-    var bumpHash = commit("bump", {
-      nfcTag: nfcTag,
-      stamp: Date.now().toString() // 1110101822
-    });
-    var tagHash = makeHash("nfcTag", { id: nfcTag })
+    var bumpHash = commit("bump", bump);
+    var tagHash = makeHash("nfcTag", { id: bump.nfcTag });
     var linkHash = commit("bumpLink",
                   {Links:[
                       {Base:tagHash,Tag:"bump",Link:bumpHash},

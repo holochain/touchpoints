@@ -57,7 +57,7 @@
                 },
                 {
                     "Name": "bumpLinkCreate",
-                    "CallingType": "string",
+                    "CallingType": "json",
                     "Exposure": "public"
                 },
                 {
