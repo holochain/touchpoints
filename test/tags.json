@@ -41,8 +41,8 @@
                 "agentId": "%key%"
               },
             "Output": [
-              {"Entry":{"nfcTag":"12345","stamp":"1"},"EntryType":"bump","Hash":"QmNxD9pTeN5ZsPUtuvCkgm1iwJhWgp3JW5ayCggv2rtreR","Source":"QmfGaVfzfEU5wCr1rnMRHHsUszfoSDpXh2ECyAuUSkPVYA"},
-              {"Entry":{"nfcTag":"12345","stamp":"0"},"EntryType":"bump","Hash":"QmcgwnzVsWV2bbTiYNAJjUkFkmTzksrgbN7PwnqjkMuA7p","Source":"QmfGaVfzfEU5wCr1rnMRHHsUszfoSDpXh2ECyAuUSkPVYA"}
+              {"Entry":{"nfcTag":"12345","stamp":"1"},"EntryType":"bump","Hash":"QmNxD9pTeN5ZsPUtuvCkgm1iwJhWgp3JW5ayCggv2rtreR","Source":"%key%"},
+              {"Entry":{"nfcTag":"12345","stamp":"0"},"EntryType":"bump","Hash":"QmcgwnzVsWV2bbTiYNAJjUkFkmTzksrgbN7PwnqjkMuA7p","Source":"%key%"}
             ],
             "Err": "",
             "Regexp": "",
@@ -60,8 +60,8 @@
                 "tagId": "12345"
               },
             "Output": [
-              {"Entry":{"nfcTag":"12345","stamp":"1"},"EntryType":"bump","Hash":"QmNxD9pTeN5ZsPUtuvCkgm1iwJhWgp3JW5ayCggv2rtreR","Source":"QmfGaVfzfEU5wCr1rnMRHHsUszfoSDpXh2ECyAuUSkPVYA"},
-              {"Entry":{"nfcTag":"12345","stamp":"0"},"EntryType":"bump","Hash":"QmcgwnzVsWV2bbTiYNAJjUkFkmTzksrgbN7PwnqjkMuA7p","Source":"QmfGaVfzfEU5wCr1rnMRHHsUszfoSDpXh2ECyAuUSkPVYA"}
+              {"Entry":{"nfcTag":"12345","stamp":"1"},"EntryType":"bump","Hash":"QmNxD9pTeN5ZsPUtuvCkgm1iwJhWgp3JW5ayCggv2rtreR","Source":"%key%"},
+              {"Entry":{"nfcTag":"12345","stamp":"0"},"EntryType":"bump","Hash":"QmcgwnzVsWV2bbTiYNAJjUkFkmTzksrgbN7PwnqjkMuA7p","Source":"%key%"}
             ],
             "Err": "",
             "Regexp": "",
