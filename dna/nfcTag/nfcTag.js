@@ -30,7 +30,7 @@ function bumpCreate(bump) {
 }
 
 function interfaceCreate(iface) {
-  commit("Interface",iface);
+  var key = commit("interface", iface);
   return key;
 }
 function interfaceRead(key) {

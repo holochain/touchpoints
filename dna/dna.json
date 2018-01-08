@@ -29,6 +29,12 @@
                     "Sharing": "public"
                 },
                 {
+                    "Name": "interface",
+                    "DataFormat": "json",
+                    "SchemaFile": "interface.json",
+                    "Sharing": "public"
+                },
+                {
                     "Name": "bumpLink",
                     "DataFormat": "links"
                 }
