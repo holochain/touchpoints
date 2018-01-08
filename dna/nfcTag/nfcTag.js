@@ -1,8 +1,7 @@
 'use strict';
 
 function nfcTagCreate(tagId){
-    // Commits a new nfcTag to my source chain
-    var key = commit("nfcTag",tagId);
+    var key = commit("nfcTag",tagId);         // Commits a new nfcTag to my source chain
     return key;
 }
 
@@ -29,24 +28,34 @@ function bumpCreate(bump) {
     return linkHash;
 }
 
+function interfaceCreate(iface) {
+  commit("Interface",iface);
+  return key;
+}
+function interfaceRead(key) {
+  var iface = get(key);
+  return iface;
+}
+function interfaceUpdate(params) {
+  oldkey = params.oldkey;
+  return key;
+}
+function interfaceDelete() {
+  
+}
+
+
 function getMe() {return App.Key.Hash;}
 
 function showAgentHistory(params) {
   var links = getLinks(params.agentId, "bump", {Load:true})
-  links.sort(bumpCmp);
   return links;
 }
 
 function showTagHistory(params) {
   var tagHash = makeHash("nfcTag", { id: params.tagId });
   var links = getLinks(tagHash, "bump", {Load:true});
-  links.sort(bumpCmp);
   return links;
-}
-
-
-function bumpCmp(a,b) {
-    return a.Entry.stamp < b.Entry.stamp;
 }
 
 // -----------------------------------------------------------------
