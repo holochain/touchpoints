@@ -1,115 +1,147 @@
 {
-    "Tests": [
+  "Tests": [
+    {
+      "Convey": "Create an NFC Tag",
+      "Zome": "nfcTag",
+      "FnName": "nfcTagCreate",
+      "Input": {
+        "id": "12345"
+      },
+      "Output": "%h%",
+      "Err": "",
+      "Regexp": "",
+      "Time": 0,
+      "Wait": 0,
+      "Exposure": "public",
+      "Raw": false,
+      "Repeat": 0
+    },
+    {
+      "Convey": "Create bump",
+      "Zome": "nfcTag",
+      "FnName": "bumpCreate",
+      "Input": {
+        "nfcTag": "12345",
+        "stamp": "%reps%"
+      },
+      "Output": "%h%",
+      "Err": "",
+      "Regexp": "",
+      "Time": 0,
+      "Wait": 0,
+      "Exposure": "public",
+      "Raw": false,
+      "Repeat": 2
+    },
+    {
+      "Convey": "Return a list of bumps for an agent",
+      "Zome": "nfcTag",
+      "FnName": "showAgentHistory",
+      "Input": {
+        "agentId": "%key%"
+      },
+      "Output": [
         {
-            "Convey": "Create an NFC Tag",
-            "Zome": "nfcTag",
-            "FnName": "nfcTagCreate",
-            "Input": {
-                "id": "12345"
-            },
-            "Output": "%h%",
-            "Err": "",
-            "Regexp": "",
-            "Time": 0,
-            "Wait": 0,
-            "Exposure": "public",
-            "Raw": false,
-            "Repeat": 0
+          "Entry": {
+            "nfcTag": "12345",
+            "stamp": "1"
+          },
+          "EntryType": "bump",
+          "Hash": "QmNxD9pTeN5ZsPUtuvCkgm1iwJhWgp3JW5ayCggv2rtreR",
+          "Source": "%key%"
         },
         {
-            "Convey": "Create bump",
-            "Zome": "nfcTag",
-            "FnName": "bumpCreate",
-            "Input": {
-                "nfcTag": "12345",
-                "stamp": "%reps%"
-              },
-            "Output": "%h%",
-            "Err": "",
-            "Regexp": "",
-            "Time": 0,
-            "Wait": 0,
-            "Exposure": "public",
-            "Raw": false,
-            "Repeat": 2
+          "Entry": {
+            "nfcTag": "12345",
+            "stamp": "0"
+          },
+          "EntryType": "bump",
+          "Hash": "QmcgwnzVsWV2bbTiYNAJjUkFkmTzksrgbN7PwnqjkMuA7p",
+          "Source": "%key%"
+        }
+      ],
+      "Err": "",
+      "Regexp": "",
+      "Time": 0,
+      "Wait": 0,
+      "Exposure": "public",
+      "Raw": false,
+      "Repeat": 0
+    },
+    {
+      "Convey": "Return a list of bumps for an nfc tag",
+      "Zome": "nfcTag",
+      "FnName": "showTagHistory",
+      "Input": {
+        "tagId": "12345"
+      },
+      "Output": [
+        {
+          "Entry": {
+            "nfcTag": "12345",
+            "stamp": "1"
+          },
+          "EntryType": "bump",
+          "Hash": "QmNxD9pTeN5ZsPUtuvCkgm1iwJhWgp3JW5ayCggv2rtreR",
+          "Source": "%key%"
         },
         {
-            "Convey": "Return a list of bumps for an agent",
-            "Zome": "nfcTag",
-            "FnName": "showAgentHistory",
-            "Input": {
-                "agentId": "%key%"
-              },
-            "Output": [
-              {"Entry":{"nfcTag":"12345","stamp":"1"},"EntryType":"bump","Hash":"QmNxD9pTeN5ZsPUtuvCkgm1iwJhWgp3JW5ayCggv2rtreR","Source":"%key%"},
-              {"Entry":{"nfcTag":"12345","stamp":"0"},"EntryType":"bump","Hash":"QmcgwnzVsWV2bbTiYNAJjUkFkmTzksrgbN7PwnqjkMuA7p","Source":"%key%"}
-            ],
-            "Err": "",
-            "Regexp": "",
-            "Time": 0,
-            "Wait": 0,
-            "Exposure": "public",
-            "Raw": false,
-            "Repeat": 0
-        },
-        {
-            "Convey": "Return a list of bumps for an nfc tag",
-            "Zome": "nfcTag",
-            "FnName": "showTagHistory",
-            "Input": {
-                "tagId": "12345"
-              },
-            "Output": [
-              {"Entry":{"nfcTag":"12345","stamp":"1"},"EntryType":"bump","Hash":"QmNxD9pTeN5ZsPUtuvCkgm1iwJhWgp3JW5ayCggv2rtreR","Source":"%key%"},
-              {"Entry":{"nfcTag":"12345","stamp":"0"},"EntryType":"bump","Hash":"QmcgwnzVsWV2bbTiYNAJjUkFkmTzksrgbN7PwnqjkMuA7p","Source":"%key%"}
-            ],
-            "Err": "",
-            "Regexp": "",
-            "Time": 0,
-            "Wait": 0,
-            "Exposure": "public",
-            "Raw": false,
-            "Repeat": 0
-        },
-        {
-            "Convey": "Create an Interface",
-            "Zome": "nfcTag",
-            "FnName": "interfaceCreate",
-            "Input": {
-                "appDNAHash":"test_hash!",
-                "zomeName":"test_zomename!",
-                "interfaceName":"test_interfaceName"
-              },
-            "Output": "%h%",
-            "Err": "",
-            "Regexp": "",
-            "Time": 0,
-            "Wait": 0,
-            "Exposure": "public",
-            "Raw": false,
-            "Repeat": 0
-        },
-        {
-        "Convey": "Read an Interface",
-        "Zome": "nfcTag",
-        "FnName": "interfaceRead",
-        "Input": "%h%",
-        "Output": {
-                "appDNAHash":"test_hash!",
-                "zomeName":"test_zomename!",
-                "interfaceName":"test_interfaceName"
-        },
-        "Err": "",
-        "Regexp": "",
-        "Time": 0,
-        "Wait": 0,
-        "Exposure": "public",
-        "Raw": false,
-        "Repeat": 0
+          "Entry": {
+            "nfcTag": "12345",
+            "stamp": "0"
+          },
+          "EntryType": "bump",
+          "Hash": "QmcgwnzVsWV2bbTiYNAJjUkFkmTzksrgbN7PwnqjkMuA7p",
+          "Source": "%key%"
+        }
+      ],
+      "Err": "",
+      "Regexp": "",
+      "Time": 0,
+      "Wait": 0,
+      "Exposure": "public",
+      "Raw": false,
+      "Repeat": 0
+    },
+    {
+      "Convey": "Create an Interface",
+      "Zome": "nfcTag",
+      "FnName": "interfaceCreate",
+      "Input": {
+        "appDNAHash": "test_hash!",
+        "zomeName": "test_zomename!",
+        "interfaceName": "test_interfaceName"
+      },
+      "Output": "%h%",
+      "Err": "",
+      "Regexp": "",
+      "Time": 0,
+      "Wait": 0,
+      "Exposure": "public",
+      "Raw": false,
+      "Repeat": 0
+    },
+    {
+      "Convey": "Read an Interface",
+      "Zome": "nfcTag",
+      "FnName": "interfaceRead",
+      "Input": "%h%",
+      "Output": {
+        "appDNAHash": "test_hash!",
+        "zomeName": "test_zomename!",
+        "interfaceName": "test_interfaceName"
+      },
+      "Err": "",
+      "Regexp": "",
+      "Time": 0,
+      "Wait": 0,
+      "Exposure": "public",
+      "Raw": false,
+      "Repeat": 0
     }
-    ],
-    "Identity": "",
-    "Fixtures": {
-        "Agents": null
-    }
+  ],
+  "Identity": "",
+  "Fixtures": {
+    "Agents": null
+  }
 }

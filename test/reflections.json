@@ -1,0 +1,15 @@
+{
+  "Tests": [
+    {
+      "Convey": "This is an empty test that will break. Holochain is test driven, please see: https://github.com/metacurrency/holochain/wiki/App-Testing",
+      "FnName": "reflectionCreate",
+      "Input": {
+        "notice": "efficency",
+        "description": "Maria farmed the organic Tomatos very speedily today"
+      },
+      "Output": "%h%",
+      "Exposure": "public",
+      "Zome": "reflections"
+    }
+  ]
+}

@@ -1,119 +1,158 @@
 {
-    "Version": 1,
-    "UUID": "16b6e954-f6dc-4fcd-964c-46b7fa3f1cdf",
-    "Name": "touchpoints",
-    "Properties": {
-        "description": "Logging system for interactions of various types: human-to-human, human-to-machine, human-to-object, machine-to-object etc",
-        "language": "en"
-    },
-    "PropertiesSchemaFile": "properties_schema.json",
-    "BasedOn": {
-        "H": null
-    },
-    "Zomes": [
+  "Version": 1,
+  "UUID": "16b6e954-f6dc-4fcd-964c-46b7fa3f1cdf",
+  "Name": "touchpoints",
+  "Properties": {
+    "description": "Logging system for interactions of various types: human-to-human, human-to-machine, human-to-object, machine-to-object etc",
+    "language": "en"
+  },
+  "PropertiesSchemaFile": "properties_schema.json",
+  "BasedOn": {
+    "H": null
+  },
+  "Zomes": [
+    {
+      "Name": "nfcTag",
+      "Description": "Create, register, and link NFC tags to data types, interfaces and people.",
+      "CodeFile": "nfcTag.js",
+      "Entries": [
         {
-            "Name": "nfcTag",
-            "Description": "Create, register, and link NFC tags to data types, interfaces and people.",
-            "CodeFile": "nfcTag.js",
-            "Entries": [
-                {
-                    "Name": "nfcTag",
-                    "DataFormat": "json",
-                    "SchemaFile": "nfcTag.json",
-                    "Sharing": "public"
-                },
-                {
-                    "Name": "bump",
-                    "DataFormat": "json",
-                    "SchemaFile": "bump.json",
-                    "Sharing": "public"
-                },
-                {
-                    "Name": "interface",
-                    "DataFormat": "json",
-                    "SchemaFile": "interface.json",
-                    "Sharing": "public"
-                },
-                {
-                    "Name": "bumpLink",
-                    "DataFormat": "links"
-                }
-            ],
-            "RibosomeType": "js",
-            "Functions": [
-                {
-                    "Name": "nfcTagCreate",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "nfcTagRead",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "nfcTagUpdate",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "nfcTagDelete",
-                    "CallingType": "string",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "bumpCreate",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "bumpRead",
-                    "CallingType": "links",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "showAgentHistory",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "showTagHistory",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "getMe",
-                    "CallingType": "string",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "interfaceCreate",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },{
-                    "Name": "interfaceRead",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },{
-                    "Name": "interfaceUpdate",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },{
-                    "Name": "interfaceDelete",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                }
-            ],
-            "BridgeFuncs": null,
-            "BridgeTo": ""
+          "Name": "nfcTag",
+          "DataFormat": "json",
+          "SchemaFile": "nfcTag.json",
+          "Sharing": "public"
+        },
+        {
+          "Name": "bump",
+          "DataFormat": "json",
+          "SchemaFile": "bump.json",
+          "Sharing": "public"
+        },
+        {
+          "Name": "interface",
+          "DataFormat": "json",
+          "SchemaFile": "interface.json",
+          "Sharing": "public"
+        },
+        {
+          "Name": "bumpLink",
+          "DataFormat": "links"
         }
-    ],
-    "RequiresVersion": 18,
-    "DHTConfig": {
-        "HashType": "sha2-256"
+      ],
+      "RibosomeType": "js",
+      "Functions": [
+        {
+          "Name": "nfcTagCreate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "nfcTagRead",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "nfcTagUpdate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "nfcTagDelete",
+          "CallingType": "string",
+          "Exposure": "public"
+        },
+        {
+          "Name": "bumpCreate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "bumpRead",
+          "CallingType": "links",
+          "Exposure": "public"
+        },
+        {
+          "Name": "showAgentHistory",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "showTagHistory",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "getMe",
+          "CallingType": "string",
+          "Exposure": "public"
+        },
+        {
+          "Name": "interfaceCreate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "interfaceRead",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "interfaceUpdate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "interfaceDelete",
+          "CallingType": "json",
+          "Exposure": "public"
+        }
+      ],
+      "BridgeFuncs": null,
+      "BridgeTo": ""
     },
-    "Progenitor": {
-        "Identity": "",
-        "PubKey": null
+    {
+      "Name": "reflections",
+      "Description": "friendly feedback between community members",
+      "RibosomeType": "js",
+      "CodeFile": "reflections.js",
+      "Entries": [
+        {
+          "Name": "reflection",
+          "Required": true,
+          "DataFormat": "json",
+          "Sharing": "public"
+        }
+      ],
+      "Functions": [
+        {
+          "Name": "reflectionCreate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "reflectionRead",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "reflectionUpdate",
+          "CallingType": "json",
+          "Exposure": "public"
+        },
+        {
+          "Name": "reflectionDelete",
+          "CallingType": "json",
+          "Exposure": "public"
+        }
+      ]
     }
+  ],
+  "RequiresVersion": 18,
+  "DHTConfig": {
+    "HashType": "sha2-256"
+  },
+  "Progenitor": {
+    "Identity": "",
+    "PubKey": null
+  }
 }

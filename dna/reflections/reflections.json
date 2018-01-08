@@ -1,0 +1,14 @@
+{
+  "title": "reflections",
+  "type": "object",
+  "properties": {
+    "id": {
+      "notice": "string",
+      "description": "string",
+    }
+  },
+  "required": [
+    "notice",
+    "description"
+  ]
+}
