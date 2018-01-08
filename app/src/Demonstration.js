@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
-import FontAwesome from 'react-fontawesome'
+var FontAwesome = require('react-fontawesome')
 
 class Demonstration extends Component {
   constructor(props) {
@@ -32,7 +32,16 @@ class Demonstration extends Component {
                     <p>ANYTHING NOTABLE?</p>
                     <div className="row">
                       <div className="col-xs-6">
-                        <Link to={''}><h4>No</h4></Link>
+                        <Link to={''}>
+                          <FontAwesome
+                            className="super-crazy-colors"
+                            name="rocket"
+                            size="2x"
+                            spin
+                            style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+                          />
+                          <h4>No</h4>
+                        </Link>
                       </div>
                       <div className="col-xs-6">
                         <Link to={''}><h4>Yes</h4></Link>

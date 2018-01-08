@@ -97,7 +97,7 @@ button.continue {
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   padding: 10px;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 
 .demo-list-item img {
@@ -110,6 +110,16 @@ button.continue {
 
 .center {
   margin: auto;
+}
+
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+
+.underline_item {
+  border-bottom: 1px solid #CCC;
+  margin-top: 10px;
 }
 
 @keyframes App-logo-spin {
