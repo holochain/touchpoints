@@ -1,15 +1,12 @@
-export const CREATE_REFLECTION = 'createReflection'
+export const CREATE_REFLECTION = 'reflectionCreate'
 
-export function createReflection(subject, notice, description, then) {
+export function createReflection(reflection, then) {
   return {
     type: CREATE_REFLECTION,
     meta: {
       isHc: true,
-      namespace: 'clutter',
-      data: {
-        notice,
-        description
-      },
+      namespace: 'reflections',
+      data: reflection,
       then
     }
   }

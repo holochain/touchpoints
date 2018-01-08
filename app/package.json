@@ -2,6 +2,7 @@
   "name": "touchpoints",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4141",
   "dependencies": {
     "hc-redux-middleware": "^1.0.2",
     "lodash": "^4.17.4",
