@@ -18,7 +18,6 @@ function nfcTagDelete(hash){
 
 function bumpCreate(bump) {
     var me = getMe();
-    // what if two people bump a tag during the same second?
     var bumpHash = commit("bump", bump);
     var tagHash = makeHash("nfcTag", { id: bump.nfcTag });
     var linkHash = commit("bumpLink",

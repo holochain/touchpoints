@@ -121,6 +121,10 @@
           "Required": true,
           "DataFormat": "json",
           "Sharing": "public"
+        },
+        {
+          "Name": "reflectionLink",
+          "DataFormat": "links"
         }
       ],
       "Functions": [

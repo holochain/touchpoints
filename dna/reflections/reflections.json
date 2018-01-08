@@ -5,12 +5,14 @@
     "id": {
       "notice": "string",
       "description": "string",
-      "stamp": "string"
+      "stamp": "string",
+      "reciever": "string",
     }
   },
   "required": [
     "notice",
     "description",
-    "stamp"
+    "stamp",
+    "reciever",
   ]
 }

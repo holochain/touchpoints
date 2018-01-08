@@ -5,19 +5,40 @@
       "FnName": "reflectionCreate",
       "Input": {
         "notice": "efficency",
-        "description": "Maria farmed the organic Tomatos very speedily today"
+        "description": "Maria farmed the organic Tomatos very speedily today",
+        "stamp": "0",
+        "reciever":"%dna%"
       },
-      "Output": "%h%",
+      "Output": "%h1%",
+      "Exposure": "public",
+      "Zome": "reflections"
+    },
+     {
+      "Convey": "New Reflection links from author to reflection",
+      "Raw":true,
+      "Input": "getLinks('%key%', 'gave reflection')[0].Hash",
+      "Output": "%h1%",
       "Exposure": "public",
       "Zome": "reflections"
     },
     {
+      "Convey": "New Reflection links from reciever to reflection",
+      "Raw":true,
+      "Input": "getLinks('%dna%', 'recieved reflection')[0].Hash",
+      "Output": "%h1%",
+      "Exposure": "public",
+      "Zome": "reflections"
+    },
+
+    {
       "Convey": "Read back that same reflection",
       "FnName": "reflectionRead",
-      "Input": "%h%",
+      "Input": "%h1%",
       "Output": {
         "notice": "efficency",
-        "description": "Maria farmed the organic Tomatos very speedily today"
+        "description": "Maria farmed the organic Tomatos very speedily today",
+        "stamp": "0",
+        "reciever":"%dna%"
       },
       "Exposure": "public",
       "Zome": "reflections"
