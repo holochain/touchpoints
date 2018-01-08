@@ -33,14 +33,17 @@ function interfaceCreate(iface) {
   var key = commit("interface", iface);
   return key;
 }
+
 function interfaceRead(key) {
   var iface = get(key);
-  return iface;
+  return JSON.parse(iface);
 }
+
 function interfaceUpdate(params) {
   oldkey = params.oldkey;
   return key;
 }
+
 function interfaceDelete() {
 
 }
