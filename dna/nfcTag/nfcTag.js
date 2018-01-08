@@ -29,6 +29,23 @@ function bumpCreate(bump) {
     return linkHash;
 }
 
+function interfaceCreate(iface) {
+  commit("Interface",iface);
+  return key;
+}
+function interfaceRead(key) {
+  var iface = get(key);
+  return iface;
+}
+function interfaceUpdate(params) {
+  oldkey = params.oldkey;
+  return key;
+}
+function interfaceDelete() {
+
+}
+
+
 function getMe() {return App.Key.Hash;}
 
 function showAgentHistory(params) {
@@ -43,7 +60,6 @@ function showTagHistory(params) {
   links.sort(bumpCmp);
   return links;
 }
-
 
 function bumpCmp(a,b) {
     return a.Entry.stamp < b.Entry.stamp;
@@ -86,6 +102,9 @@ function validateCommit (entryName, entry, header, pkg, sources) {
     case "bumpLink":
       // validation code here
       return true;
+    case "interface":
+      // validation code here
+      return true;
     default:
       // invalid entry name!!
       return false;
@@ -107,6 +126,9 @@ function validatePut (entryName, entry, header, pkg, sources) {
       // validation code here
       return true;
     case "bump":
+      // validation code here
+      return true;
+    case "interface":
       // validation code here
       return true;
     default:
@@ -136,6 +158,9 @@ function validateMod (entryName, entry, header, replaces, pkg, sources) {
     case "typeLink":
       // validation code here
       return false;
+    case "interface":
+      // validation code here
+      return true;
     default:
       // invalid entry name!!
       return false;
@@ -161,6 +186,9 @@ function validateDel (entryName, hash, pkg, sources) {
     case "typeLink":
       // validation code here
       return false;
+    case "interface":
+      // validation code here
+      return true;
     default:
       // invalid entry name!!
       return false;

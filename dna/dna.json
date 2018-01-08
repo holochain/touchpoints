@@ -79,6 +79,23 @@
                     "Name": "getMe",
                     "CallingType": "string",
                     "Exposure": "public"
+                },
+                {
+                    "Name": "interfaceCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },{
+                    "Name": "interfaceRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },{
+                    "Name": "interfaceUpdate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },{
+                    "Name": "interfaceDelete",
+                    "CallingType": "json",
+                    "Exposure": "public"
                 }
             ],
             "BridgeFuncs": null,
