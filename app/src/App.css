@@ -92,6 +92,10 @@ button.continue {
   margin: 20px;
 }
 
+.demo-list-item {
+  border: 1px solid rgba(255, 255, 255, 0.51);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
