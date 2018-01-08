@@ -23,18 +23,27 @@ class ReflectionDetail extends Component {
           Developmental Edge: My developmental edge is to grow and open my mind
           to new people.
         </div>
-        <div className="prompt_message">ANYTHING NOTEWORTHY?</div>
+
+        <div className="section">
+          <div className="prompt_message">ANYTHING NOTEWORTHY?</div>
+
+          <textarea className="form-control mainInput" />
+        </div>
 
         <div className="container">
           <div className="row">
-            <div className="col-xs-3" />
-            <div className="col-xs-3">
-              <IconButton label="YES" />
+            <div className="buttonWrapper">
+              <IconButton _icon="/img/abundance_icon.png" label="ABUNDANCE" />
+              <IconButton label="MUTUALITY" _icon="/img/mutuality_icon.png" />
+              <IconButton
+                label="COLLABORATION"
+                _icon="/img/collaboration_icon.png"
+              />
             </div>
-            <div className="col-xs-3">
-              <IconButton label="NO" />
-
-              <div className="col-md-3" />
+            <div className="buttonWrapper">
+              <IconButton label="EFFICIENCY" _icon="/img/efficiency_icon.png" />
+              <IconButton label="CREATIVITY" _icon="/img/creativity_icon.png" />
+              <IconButton label="GENEROSITY" _icon="/img/generosity_icon.png" />
             </div>
           </div>
         </div>
