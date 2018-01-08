@@ -18,14 +18,16 @@ class App extends Component {
           <div className="spinner transition500" />
           <div className="error transition500" />
           <div id="content">
-            <Route path="/profile" exact component={ProfileContainer} />
-            <Route path="/reflection" exact component={ReflectionContainer} />
-            <Route
-              path="/reflection-detail"
-              exact
-              component={ReflectionDetailContainer}
-            />
-            <Route path="/" exact component={DemonstrationContainer} />
+            <div className="wrapper">
+              <Route path="/profile" exact component={ProfileContainer} />
+              <Route path="/reflection" exact component={ReflectionContainer} />
+              <Route
+                path="/reflection-detail"
+                exact
+                component={ReflectionDetailContainer}
+              />
+              <Route path="/" exact component={DemonstrationContainer} />
+            </div>
           </div>
         </div>
       </div>
