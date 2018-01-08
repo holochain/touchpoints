@@ -10,11 +10,11 @@
     },
     "interfaceName": {
       "type": "string"
-    },
+    }
   },
   "required": [
     "appDNAHash",
     "zomeName",
-    "interfaceName",
+    "interfaceName"
   ]
 }
