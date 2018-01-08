@@ -4,7 +4,32 @@ import IconButton from './IconButton';
 class ReflectionDetail extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      notice: 'Abundance',
+      description: ''
+    };
+  }
+  setNotice = (notice) => {
+    this.setState({
+      notice
+    })
+  }
+  setDescription = (event) => {
+    this.setState({
+      description: event.target.value
+    })
+  }
+  submitReflection() {
+    this.props.createReflection({
+      notice: this.state.notice,
+      description: this.state.description,
+      stamp: Date.now()
+    })
+  }
+  checkClassName(buttonType) {
+    if (this.state.notice === buttonType) {
+      return "buttonPressed"
+    } else return ""
   }
   render() {
     return (
@@ -27,23 +52,35 @@ class ReflectionDetail extends Component {
         <div className="section">
           <div className="prompt_message">ANYTHING NOTEWORTHY?</div>
 
-          <textarea className="form-control mainInput" />
+          <textarea value={this.state.description} onChange={this.setDescription} className="form-control mainInput" />
         </div>
 
         <div className="container">
           <div className="row">
             <div className="buttonWrapper">
-              <IconButton _icon="/img/abundance_icon.png" label="ABUNDANCE" />
-              <IconButton label="MUTUALITY" _icon="/img/mutuality_icon.png" />
-              <IconButton
-                label="COLLABORATION"
-                _icon="/img/collaboration_icon.png"
-              />
+              <div className={this.checkClassName('Abundance')} onClick={() => this.setNotice("Abundance")}>
+                <IconButton _icon="/img/abundance_icon.png" label="ABUNDANCE" />
+              </div>
+              <div className={this.checkClassName('Mutuality')} onClick={() => this.setNotice("Mutuality")}>
+                <IconButton label="MUTUALITY" _icon="/img/mutuality_icon.png" />
+              </div>
+              <div className={this.checkClassName('Collaboration')} onClick={() => this.setNotice("Collaboration")}>
+                <IconButton
+                  label="COLLABORATION"
+                  _icon="/img/collaboration_icon.png"
+                />
+              </div>
             </div>
             <div className="buttonWrapper">
-              <IconButton label="EFFICIENCY" _icon="/img/efficiency_icon.png" />
-              <IconButton label="CREATIVITY" _icon="/img/creativity_icon.png" />
-              <IconButton label="GENEROSITY" _icon="/img/generosity_icon.png" />
+              <div className={this.checkClassName('Efficiency')} onClick={() => this.setNotice("Efficiency")}>
+                <IconButton label="EFFICIENCY" _icon="/img/efficiency_icon.png" />
+              </div>
+              <div className={this.checkClassName('Creativity')} onClick={() => this.setNotice("Creativity")}>
+                <IconButton label="CREATIVITY" _icon="/img/creativity_icon.png" />
+              </div>
+              <div className={this.checkClassName('Generosity')} onClick={() => this.setNotice("Generosity")}>
+                <IconButton label="GENEROSITY" _icon="/img/generosity_icon.png" />
+              </div>
             </div>
           </div>
         </div>

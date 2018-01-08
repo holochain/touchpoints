@@ -160,3 +160,7 @@ button.continue {
   box-shadow: 0 2px 4px 0 rgba(199, 199, 199, 0.5);
   border-radius: 33px;
 }
+
+.buttonPressed button.icon {
+  background: rgba(200, 200, 200, 1);
+}
