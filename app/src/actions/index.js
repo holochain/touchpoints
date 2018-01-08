@@ -1,14 +1,16 @@
-export const GET_HANDLE = 'getHandle'
+export const CREATE_REFLECTION = 'createReflection'
 
-/*export function getHandle(userHash, isMe = false, then) {
+export function createReflection(subject, notice, description, then) {
   return {
-    type: GET_HANDLE,
+    type: CREATE_REFLECTION,
     meta: {
       isHc: true,
       namespace: 'clutter',
-      data: userHash,
-      isMe,
+      data: {
+        notice,
+        description
+      },
       then
     }
   }
-}*/
+}
