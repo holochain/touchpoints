@@ -28,6 +28,7 @@ class App extends Component {
                 component={ReflectionDetailContainer}
               />
               <Route path="/" exact component={DemonstrationContainer} />
+              <Route path="/testing" exact component={TestingContainer} />
             </div>
           </div>
         </div>
