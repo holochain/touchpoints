@@ -18,7 +18,6 @@ class App extends Component {
           <div className="spinner transition500" />
           <div className="error transition500" />
           <div id="content">
-            <Route path="/" exact component={DemonstrationContainer} />
             <Route path="/profile" exact component={ProfileContainer} />
             <Route path="/reflection" exact component={ReflectionContainer} />
             <Route
@@ -26,6 +25,7 @@ class App extends Component {
               exact
               component={ReflectionDetailContainer}
             />
+            <Route path="/" exact component={DemonstrationContainer} />
           </div>
         </div>
       </div>
