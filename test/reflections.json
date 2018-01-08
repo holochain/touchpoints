@@ -1,0 +1,26 @@
+{
+  "Tests": [
+    {
+      "Convey": "Create a new reflection about Marias tomato farming skills",
+      "FnName": "reflectionCreate",
+      "Input": {
+        "notice": "efficency",
+        "description": "Maria farmed the organic Tomatos very speedily today"
+      },
+      "Output": "%h%",
+      "Exposure": "public",
+      "Zome": "reflections"
+    },
+    {
+      "Convey": "Read back that same reflection",
+      "FnName": "reflectionRead",
+      "Input": "%h%",
+      "Output": {
+        "notice": "efficency",
+        "description": "Maria farmed the organic Tomatos very speedily today"
+      },
+      "Exposure": "public",
+      "Zome": "reflections"
+    }
+  ]
+}
