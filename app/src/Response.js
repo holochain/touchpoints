@@ -13,9 +13,9 @@ class Response extends Component {
         <div className="panel-body">
           <h3>YOU WERE WITH</h3>
           <div className="row">
-            <div className="col-xs-1 col-sm-3">
+            <div className="col-xs-1 col-sm-2">
             </div>
-            <div className="col-xs-10 col-sm-6">
+            <div className="col-xs-10 col-sm-8">
               {this.props.tags.map((tag, idx)=> {
                 return (
                 <div key={idx} className="row demo-list-item">
@@ -35,7 +35,7 @@ class Response extends Component {
                 )
               })}
             </div>
-            <div className="col-xs-1 col-sm-3">
+            <div className="col-xs-1 col-sm-2">
             </div>
           </div>
         </div>
