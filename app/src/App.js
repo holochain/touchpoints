@@ -8,6 +8,7 @@ import ProfileContainer from './ProfileContainer';
 import DemonstrationContainer from './DemonstrationContainer';
 import ReflectionContainer from './ReflectionContainer.js';
 import ReflectionDetailContainer from './ReflectionDetailContainer.js';
+import TestingContainer from './TestingContainer'
 
 class App extends Component {
   render() {
